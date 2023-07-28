@@ -31,10 +31,11 @@ import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+  fruit_choice)
 
 # normalized the json data
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json,'name', 'id','family', 'order','genus','nutritions','calories','fat','sugar','carbohydrates','protein')
 
 # displays normalized json data
 streamlit.text(fruityvice_normalized)
+
 
 
 
