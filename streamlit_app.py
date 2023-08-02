@@ -48,7 +48,7 @@ try:
 except URLError as e:
       streamlit.error()
 
-streamlit.text("The fruit load list contains:")
+
 #snowflake functions
 def get_fruit_load_list():
       with my_cnx.cursor() as my_cur:
